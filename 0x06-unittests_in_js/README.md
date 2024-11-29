@@ -1,3 +1,7 @@
+
+Curriculum
+Short Specializations
+Average: 82.55%
 0x06. Unittests in JS
 UnitTests
 Back-end
@@ -6,19 +10,21 @@ ES6
 NodeJS
 ExpressJS
 Mocha
+ Weight: 1
+ Project will start Jul 24, 2024 6:00 AM, must end by Jul 26, 2024 6:00 AM
+ Checker was released at Jul 24, 2024 6:00 PM
+ An auto review will be launched at the deadline
+
 
 Resources
 Read or watch:
 
-Mocha documentation(https://mochajs.org/)
-Chai(https://www.chaijs.com/api/)
-Sinon(https://sinonjs.org/releases/v7.5.0/)
-Express(https://expressjs.com/en/guide/routing.html)
-Request(https://www.npmjs.com/package/request)
-How to Test NodeJS Apps using Mocha, Chai and SinonJS(https://www.digitalocean.com/community/tutorials/how-to-test-nodejs-apps-using-mocha-chai-and-sinonjs)
-
-
-
+Mocha documentation
+Chai
+Sinon
+Express
+Request
+How to Test NodeJS Apps using Mocha, Chai and SinonJS
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -30,8 +36,6 @@ When and how to use stubs
 What are hooks and when to use them
 Unit testing with Async functions
 How to write integration tests with a small node server
-
-
 Requirements
 All of your code will be executed on Ubuntu 18.04 using Node 12.x.x
 Allowed editors: vi, vim, emacs, Visual Studio Code
@@ -39,10 +43,7 @@ All your files should end with a new line
 A README.md file, at the root of the folder of the project, is mandatory
 Your code should use the js extension
 When running every test with npm run test *.test.js, everything should pass correctly without any warning or error
-
-
-
-
+Tasks
 0. Basic test with Mocha and Node assertion library
 mandatory
 Install Mocha using npm:
@@ -94,9 +95,12 @@ bob@dylan:~$ npm test 0-calcul.test.js
 
   130 passing (35ms)
 bob@dylan:~$ 
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: package.json, 0-calcul.js, 0-calcul.test.js
+  
 1. Combining descriptions
 mandatory
 Create a new file named 1-calcul.js:
@@ -131,9 +135,12 @@ Expected output
 0.2
 > calculateNumber('DIVIDE', 1.4, 0)
 'Error'
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 1-calcul.js, 1-calcul.test.js
+  
 2. Basic test using Chai assertion library
 mandatory
 While using Node assert library is completely valid, a lot of developers prefer to have a behavior driven development style. This type being easier to read and therefore to maintain.
@@ -151,9 +158,12 @@ Requirements:
 
 You should be able to run the test suite using npm test 2-calcul_chai.test.js
 Every test should pass without any warning
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 2-calcul_chai.js, 2-calcul_chai.test.js
+  
 3. Spies
 mandatory
 Spies are a useful wrapper that will execute the wrapped function, and log useful information (e.g. was it called, with what arguments). Sinon is a library allowing you to create spies.
@@ -181,8 +191,12 @@ Tips:
 Remember to always restore a spy after using it in a test, it will prevent you from having weird behaviors
 Spies are really useful and allow you to focus only on what your code is doing and not the downstream APIs or functions
 Remember that integration test is different from unit test. Your unit test should test your code, not the code of a different function
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: utils.js, 3-payment.js, 3-payment.test.js
+  
 4. Stubs
 mandatory
 Stubs are similar to spies. Except that you can provide a different implementation of the function you are wrapping. Sinon can be used as well for stubs.
@@ -205,9 +219,12 @@ Tips:
 
 Using stubs allows you to greatly speed up your test. When executing thousands of tests, saving a few seconds is important
 Using stubs allows you to control specific edge case (e.g a function throwing an error or returning a specific result like a number or a timestamp)
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 4-payment.js, 4-payment.test.js
+  
 5. Hooks
 mandatory
 Hooks are useful functions that can be called before execute one or all tests in a suite
@@ -229,8 +246,12 @@ You should be able to run the test suite using npm test 5-payment.test.js
 Every test should pass without any warning
 You should use only one spy to complete this exercise
 You should use a beforeEach and a afterEach hooks to complete this exercise
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 5-payment.js, 5-payment.test.js
+  
 6. Async tests with done
 mandatory
 Look into how to support async testing, for example when waiting for the answer of an API or from a Promise
@@ -252,9 +273,12 @@ Requirements:
 You should be able to run the test suite using npm test 6-payment_token.test.js
 Every test should pass without any warning
 You should use the done callback to execute this test
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 6-payment_token.js, 6-payment_token.test.js
+  
 7. Skip
 mandatory
 When you have a long list of tests, and you can’t figure out why a test is breaking, avoid commenting out a test, or removing it. Skip it instead, and file a ticket to come back to it as soon as possible
@@ -307,8 +331,12 @@ Requirements:
 
 You should be able to run the test suite using npm test 7-skip.test.js
 Every test should pass without any warning
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 7-skip.test.js
+  
 8. Basic Integration testing
 mandatory
 In a folder 8-api located at the root of the project directory, copy this package.json over.
@@ -378,9 +406,12 @@ Requirements:
 
 You should be able to run the test suite using npm test api.test.js
 Every test should pass without any warnings
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 8-api/package.json, 8-api/api.js, 8-api/api.test.js
+  
 9. Regex integration testing
 mandatory
 In a folder 9-api, reusing the previous project in 8-api (package.json, api.js and api.test.js)
@@ -444,9 +475,12 @@ Requirements:
 
 You should be able to run the test suite using npm test api.test.js
 Every test should pass without any warning
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 9-api/api.js, 9-api/api.test.js, 9-api/package.json
+  
 10. Deep equality & Post integration testing
 mandatory
 In a folder 10-api, reusing the previous project in 9-api (package.json, api.js and api.test.js)
@@ -487,7 +521,11 @@ Requirements:
 You should be able to run the test suite using npm test api.test.js
 Every test should pass without any warning
 Your server should not display any error
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x06-unittests_in_js
+File: 10-api/api.js, 10-api/api.test.js, 10-api/package.json
+  
+Copyright © 2024 ALX, All rights reserved.
 

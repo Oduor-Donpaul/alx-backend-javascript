@@ -1,22 +1,28 @@
+
+Curriculum
+Short Specializations
+Average: 83.06%
 0x05. NodeJS Basics
 Back-end
 JavaScript
 ES6
 NodeJS
 ExpressJS
+ Weight: 1
+ Project will start Jul 22, 2024 6:00 AM, must end by Jul 24, 2024 6:00 AM
+ Checker was released at Jul 22, 2024 6:00 PM
+ An auto review will be launched at the deadline
 
 
 Resources
 Read or watch:
 
 Node JS getting started
-Process API doc(https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
-Child process(https://node.readthedocs.io/en/latest/api/process/)
-Express getting started(https://nodejs.org/api/child_process.html)
-Mocha documentation(https://expressjs.com/en/starter/installing.html)
-Nodemon documentation(https://github.com/remy/nodemon#nodemon)
-
-
+Process API doc
+Child process
+Express getting started
+Mocha documentation
+Nodemon documentation
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -29,8 +35,6 @@ create a small HTTP server using Express JS
 create advanced routes with Express JS
 use ES6 with Node JS with Babel-node
 use Nodemon to develop faster
-
-
 Requirements
 Allowed editors: vi, vim, emacs, Visual Studio Code
 All your files will be interpreted/compiled on Ubuntu 18.04 LTS using node (version 12.x.x)
@@ -41,7 +45,6 @@ Your code will be tested using Jest and the command npm run test
 Your code will be verified against lint using ESLint
 Your code needs to pass all the tests and lint. You can verify the entire project running npm run full-test
 All of your functions/classes must be exported by using this format: module.exports = myFunction;
-
 Provided files
 database.csv
 firstname,lastname,age,field
@@ -55,106 +58,18 @@ Joseph,Crisou,34,SWE
 Paul,Schneider,60,SWE
 Tommy,Schoul,32,SWE
 Katie,Shirou,21,CS
-
-
 package.json
 Click to show/hide file contents
-
-{
-  "name": "node_js_basics",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint",
-    "check-lint": "lint [0-9]*.js",
-    "test": "./node_modules/mocha/bin/mocha --require babel-register --exit",
-    "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chai-http": "^4.3.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "nodemon": "^2.0.2",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.17.0",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "request": "^2.88.0",
-    "sinon": "^7.5.0"
-  }
-}
-
 babel.config.js
 Click to show/hide file contents
-
-module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
-  ],
-};
-
 .eslintrc.js
 Click to show/hide file contents
-
-module.exports = {
-  env: {
-    browser: false,
-    es6: true,
-    jest: true,
-  },
-  extends: [
-    'airbnb-base',
-    'plugin:jest/all',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: ['jest'],
-  rules: {
-    'max-classes-per-file': 'off',
-    'no-underscore-dangle': 'off',
-    'no-console': 'off',
-    'no-shadow': 'off',
-    'no-restricted-syntax': [
-      'error',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-  },
-  overrides:[
-    {
-      files: ['*.js'],
-      excludedFiles: 'babel.config.js',
-    }
-  ]
-};
-
 and…
 Don’t forget to run $ npm install when you have the package.json
 
+Tasks
 0. Executing basic javascript with Node JS
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 In the file 0-console.js, create a function named displayMessage that prints in STDOUT the string argument.
 
 bob@dylan:~$ cat 0-main.js
@@ -165,11 +80,14 @@ displayMessage("Hello NodeJS!");
 bob@dylan:~$ node 0-main.js
 Hello NodeJS!
 bob@dylan:~$
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 0-console.js
+  
 1. Using Process stdin
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Create a program named 1-stdin.js that will be executed through command line:
 
 It should display the message Welcome to Holberton School, what is your name? (followed by a new line)
@@ -189,11 +107,14 @@ Welcome to Holberton School, what is your name?
 Your name is: John
 This important software is now closing
 bob@dylan:~$ 
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 1-stdin.js
+  
 2. Reading a file synchronously with Node JS
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Using the database database.csv (provided in project description), create a function countStudents in the file 2-read_file.js
 
 Create a function named countStudents. It should accept a path in argument
@@ -225,11 +146,14 @@ Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 bob@dylan:~$ 
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 2-read_file.js
+  
 3. Reading a file asynchronously with Node JS
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Using the database database.csv (provided in project description), create a function countStudents in the file 3-read_file_async.js
 
 Create a function named countStudents. It should accept a path in argument (same as in 2-read_file.js)
@@ -273,12 +197,17 @@ Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaum
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 Done!
 bob@dylan:~$ 
+Tips:
 
+Using asynchronous callbacks is the preferred way to write code in Node to avoid blocking threads
+Repo:
 
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 3-read_file_async.js
+  
 4. Create a small HTTP server using Node's HTTP module
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 In a file named 4-http.js, create a small HTTP server using the http module:
 
 It should be assigned to the variable app and this one must be exported
@@ -296,12 +225,14 @@ bob@dylan:~$
 bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
 Hello Holberton School!
 bob@dylan:~$ 
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 4-http.js
+  
 5. Create a more complex HTTP server using Node's HTTP module
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 In a file named 5-http.js, create a small HTTP server using the http module:
 
 It should be assigned to the variable app and this one must be exported
@@ -325,12 +256,14 @@ Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 bob@dylan:~$ 
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 5-http.js
+  
 6. Create a small HTTP server using Express
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Install Express and in a file named 6-http_express.js, create a small HTTP server using Express module:
 
 It should be assigned to the variable app and this one must be exported
@@ -357,12 +290,14 @@ bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
 </body>
 </html> 
 bob@dylan:~$ 
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 6-http_express.js
+  
 7. Create a more complex HTTP server using Express
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 In a file named 7-http_express.js, recreate the small HTTP server using Express:
 
 It should be assigned to the variable app and this one must be exported
@@ -386,12 +321,14 @@ Number of students: 10
 Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 bob@dylan:~$ 
+Repo:
 
-
-
+GitHub repository: alx-backend-javascript
+Directory: 0x05-Node_JS_basic
+File: 7-http_express.js
+  
 8. Organize a complex HTTP server using Express
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Obviously writing every part of a server within a single file is not sustainable. Let’s create a full server in a directory named full_server.
 
 Since you have used ES6 and Babel in the past projects, let’s use babel-node to allow to use ES6 functions like import or export.
@@ -488,3 +425,6 @@ Repo:
 GitHub repository: alx-backend-javascript
 Directory: 0x05-Node_JS_basic
 File: full_server/utils.js, full_server/controllers/AppController.js, full_server/controllers/StudentsController.js, full_server/routes/index.js, full_server/server.js
+  
+Copyright © 2024 ALX, All rights reserved.
+

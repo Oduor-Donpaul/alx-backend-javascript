@@ -1,5 +1,5 @@
 const Utils = {
-  calculateNumber (type, a, b) {
+  calculateNumber(type, a, b) {
     const roundedA = Math.round(a);
     const roundedB = Math.round(b);
 
@@ -12,9 +12,9 @@ const Utils = {
         if (roundedB === 0) {
           return 'Error';
         }
-        return roundedA / roundedB;
+        return parseFloat((roundedA / roundedB).toFixed(1));
       default:
-        throw new Error('Invalid type. Use SUM, SUBTRACT, or DIVIDE.');
+        throw new Error('Invalid operation type');
     }
   }
 };

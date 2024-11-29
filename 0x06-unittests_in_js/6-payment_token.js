@@ -1,13 +1,9 @@
-function getPaymentTokenFromAPI (success) {
+function getPaymentTokenFromAPI(success) {
+  return new Promise((res, rej) => {
     if (success) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve({ data: 'Successful response from the API' });
-        }, 1000); // Simulating an asynchronous operation
-      });
-    } else {
-      return Promise.resolve(); // Resolving with nothing for failure
+      res({data: 'Successful response from the API'});
     }
-  }
-  
-  module.exports = getPaymentTokenFromAPI;
+  });
+}
+
+module.exports = getPaymentTokenFromAPI;

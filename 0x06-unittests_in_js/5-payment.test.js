@@ -1,33 +1,28 @@
+const sendPaymentRequestToApi = require('./4-payment');
 const sinon = require('sinon');
-const { expect } = require('chai');
-const sendPaymentRequestToApi = require('./5-payment');
+const expect = require('chai').expect;
+
 
 describe('sendPaymentRequestToApi', () => {
-  let consoleLogSpy;
+  let consoleSpy;
 
   beforeEach(() => {
-    // Spy on console.log
-    consoleLogSpy = sinon.spy(console, 'log');
+    consoleSpy = sinon.spy(console, 'log');
   });
 
   afterEach(() => {
-    // Restore the spy after each test
-    consoleLogSpy.restore();
+    consoleSpy.restore();
   });
 
-  it('should log the correct message with total 120', () => {
-    // Act
+  it('should verify that the console is logging total as 120', () => {
     sendPaymentRequestToApi(100, 20);
-
-    // Assert
-    expect(consoleLogSpy.calledOnceWithExactly('The total is: 120')).to.be.true;
+    expect(consoleSpy.calledOnceWithExactly('The total is: 120')).to.be.true;
+    expect(consoleSpy.calledOnce).to.be.true;
   });
 
-  it('should log the correct message with total 20', () => {
-    // Act
+  it('should log the correct total for 10 and 10', () => {
     sendPaymentRequestToApi(10, 10);
-
-    // Assert
-    expect(consoleLogSpy.calledOnceWithExactly('The total is: 20')).to.be.true;
+    expect(consoleSpy.calledOnceWithExactly('The total is: 20')).to.be.true;
+    expect(consoleSpy.calledOnce).to.be.true;
   });
 });
